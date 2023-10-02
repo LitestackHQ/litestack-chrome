@@ -3313,4 +3313,4 @@ You may find the full terms and conditions of Limpid here: https://limpid.cloud/
 
 Should you have any questions regarding the extension, please do not hesitate to reach out to us at [support@limpid.cloud](mailto:support@limpid.cloud).
 
-- **Valentin Foucault** (Founder) | [Email](mailto:valentin@valentinfoucault.com) | [LinkedIn](https://www.linkedin.com/in/valentin-foucault/)
+- **Valentin Foucault** (Founder) | [Email](mailto:valentin@limpid.cloud) | [LinkedIn](https://www.linkedin.com/in/valentin-foucault/)
