@@ -4,7 +4,7 @@
   bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 15s linear;
   }
@@ -18,3 +18,4 @@
     transform: rotate(360deg);
   }
 }
+ */
