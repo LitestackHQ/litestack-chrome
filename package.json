@@ -1,6 +1,6 @@
 {
   "name": "limpid-chrome",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official Chrome extension of Limpid",
   "repository": {
     "type": "git",

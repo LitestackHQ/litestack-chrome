@@ -5,7 +5,7 @@ import psl from 'psl'; // Library to parse domain names - https://www.npmjs.com/
 import trackedDomainsList from '../../assets/json/trackedDomains.json'; // List of domains to track.
 import authCookiesList from '../../assets/json/authCookies.json'; // List of some commonly-used standard authentication cookie names (e.g. "token", "email", "auth", etc..")
 
-import { LIMPID_API_URL } from '../../constants'; // URL of the Limpid API
+import { LIMPID_EVENTS_API_URL } from '../../constants'; // URL of the Limpid Events API
 
 let userEmail = null; // User's Google account email. Will be fetched via the Chrome.identity API.
 let userId = null; // User's Google account ID. Will be fetched via the Chrome.identity API.
@@ -53,7 +53,7 @@ const sendSaasVisitActivity = (domain, authCookies) => {
     date: new Date(),
   };
 
-  fetch(`${LIMPID_API_URL}/agent/chrome/visit`, {
+  fetch(`${LIMPID_EVENTS_API_URL}/agent/chrome/visit`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
