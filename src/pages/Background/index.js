@@ -53,7 +53,7 @@ const sendSaasVisitActivity = (domain, authCookies) => {
     date: new Date(),
   };
 
-  fetch(`${LIMPID_EVENTS_API_URL}/agent/chrome/visit`, {
+  fetch(`${LIMPID_EVENTS_API_URL}/chrome/visit`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
