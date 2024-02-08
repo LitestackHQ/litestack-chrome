@@ -8,7 +8,7 @@ This document aims to answer any questions you may have. Should you have any con
 
 # How does it work?
 
-The Litestack Chrome Extension works in the background. It looks at the domains that are being visited and will ping the Litestack servers about once per day per domain whenever it detects that you’re using a SaaS tool that is in our [database of ~3,000 SaaS](https://github.com/LitestackHQ/litestack-chrome/blob/main/src/assets/json/trackedDomains.json). Your administrator can then easily find out which tools are the most used, and optimise the organisation’s tech stack.
+The Litestack Chrome Extension works in the background. It looks at the domains that are being visited and will ping the Litestack servers about once per day per domain whenever it detects that you’re using a SaaS tool that is in our [database of ~52,000 SaaS](https://github.com/LitestackHQ/litestack-chrome/blob/main/src/assets/json/trackedDomains.json). Your administrator can then easily find out which tools are the most used, and optimise the organisation’s tech stack.
 
 Litestack will generate events only for the SaaS-related domains that are listed below. **All visits to domains that are not on this list will be promptly ignored and will not generate a “visit” event sent to our servers.**
 
@@ -38,8 +38,8 @@ Your administrator may also request to export or delete this data by heading ove
 
 When installing Litestack, the following permissions are being requested:
 
-- **“Read and change your data on a number of websites” →** This lets us find out which SaaS are being used, and if those contain authentication cookies. Only the websites related to the ~ 3,000 SaaS that exist in our database are being tracked.
-- **“Read your browsing history” →** Same as above, this lets us find out which SaaS are being used. All websites that aren’t present in our database of ~ 3,000 SaaS will be promptly ignored.
+- **“Read and change your data on a number of websites” →** This lets us find out which SaaS are being used, and if those contain authentication cookies. Only the websites related to the ~ 52,000 SaaS that exist in our database are being tracked.
+- **“Read your browsing history” →** Same as above, this lets us find out which SaaS are being used. All websites that aren’t present in our database of ~ 52,000 SaaS will be promptly ignored.
 - **“Know your email address” →** This lets us identify your Google Workspace account.
 
 # How can I be sure that the extension isn’t tracking more than it pretends?
