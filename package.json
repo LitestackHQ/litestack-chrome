@@ -1,6 +1,6 @@
 {
   "name": "litestack-chrome",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Official Chrome extension of Litestack",
   "repository": {
     "type": "git",
