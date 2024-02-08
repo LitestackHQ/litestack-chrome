@@ -1,11 +1,11 @@
-// This script runs in the background of the extension. It is responsible for listening to tab changes and sending "visit" activities to the Limpid API if the user visits one of the tracked domain.
+// This script runs in the background of the extension. It is responsible for listening to tab changes and sending "visit" activities to the Litestack API if the user visits one of the tracked domain.
 
 import psl from 'psl'; // Library to parse domain names - https://www.npmjs.com/package/psl
 
 import trackedDomainsList from '../../assets/json/trackedDomains.json'; // List of domains to track.
 import authCookiesList from '../../assets/json/authCookies.json'; // List of some commonly-used standard authentication cookie names (e.g. "token", "email", "auth", etc..")
 
-import { LIMPID_EVENTS_API_URL } from '../../constants'; // URL of the Limpid Events API
+import { LITESTACK_EVENTS_API_URL } from '../../constants'; // URL of the Litestack Events API
 
 let userEmail = null; // User's Google account email. Will be fetched via the Chrome.identity API.
 let userId = null; // User's Google account ID. Will be fetched via the Chrome.identity API.
@@ -53,7 +53,7 @@ const sendSaasVisitActivity = (domain, authCookies) => {
     date: new Date(),
   };
 
-  fetch(`${LIMPID_EVENTS_API_URL}/chrome/visit`, {
+  fetch(`${LITESTACK_EVENTS_API_URL}/chrome/visit`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -78,10 +78,10 @@ const sendSaasVisitActivity = (domain, authCookies) => {
     );
 };
 
-// Function to start tracking the user's browsing activity and sending visit activities to the Limpid API if the user visits one of the tracked domains.
+// Function to start tracking the user's browsing activity and sending visit activities to the Litestack API if the user visits one of the tracked domains.
 const startTracking = async () => {
   try {
-    console.log('Starting Limpid tracking...');
+    console.log('Starting Litestack tracking...');
 
     // Get the user's Google account email and ID
     const info = await chrome.identity.getProfileUserInfo();
@@ -100,7 +100,7 @@ const startTracking = async () => {
       const hostName = url?.hostname;
       const domain = hostName ? psl.parse(hostName)?.domain : null;
 
-      // If the domain is in the list of tracked domains, send a "visit" activity to the Limpid API
+      // If the domain is in the list of tracked domains, send a "visit" activity to the Litestack API
       if (domain && websiteIsTracked(domain)) {
         const websiteHasAuthCookie = await websiteHasLoginCookiesForUser(
           domain
@@ -127,7 +127,7 @@ const startTracking = async () => {
       }
     });
 
-    console.log('Limpid tracking successfully started.');
+    console.log('Litestack tracking successfully started.');
   } catch (err) {
     console.error('Error while starting tracking.', err);
   }

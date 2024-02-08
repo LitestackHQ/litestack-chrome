@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Limpid",
+  "name": "Litestack",
   "description": "Optimise your organization's SaaS stack",
   "background": { "service_worker": "background.bundle.js" },
   "permissions": ["cookies", "identity", "identity.email", "tabs"],

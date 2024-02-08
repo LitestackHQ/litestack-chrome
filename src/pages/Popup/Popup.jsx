@@ -16,7 +16,7 @@ const Popup = () => {
   const [userId, setUserId] = useState(null); // User's Google account ID. Will be fetched via the Chrome.identity API.
   const [currentDomain, setCurrentDomain] = useState(null); // Current domain the user is on. Will be fetched via the Chrome.tabs API.
 
-  const websiteIsTrackedByLimpid = trackedDomainsList.includes(currentDomain);
+  const websiteIsTrackedByLitestack = trackedDomainsList.includes(currentDomain);
 
   // Open the FAQ page when the user clicks on the "What's this?" button.
   const handleWhatsThisButtonClick = () => {
@@ -73,7 +73,7 @@ const Popup = () => {
         What is this?
       </Button>
       <Box sx={{ marginTop: 'auto', marginBottom: 'auto' }}>
-        <img src={logo} className="App-logo" alt="Limpid logo" />
+        <img src={logo} className="App-logo" alt="Litestack logo" />
         {userEmail && userId ? (
           <Box>
             <Typography sx={{ mt: 1 }}>
@@ -85,7 +85,7 @@ const Popup = () => {
                 'You are on an unknown website.'
               )}
             </Typography>
-            {websiteIsTrackedByLimpid ? (
+            {websiteIsTrackedByLitestack ? (
               <Stack
                 sx={{ mt: 2 }}
                 direction="row"
@@ -94,7 +94,7 @@ const Popup = () => {
               >
                 <CheckCircleIcon sx={{ color: 'white' }} />
                 <Typography>
-                  This website <b>IS</b> tracked by Limpid.
+                  This website <b>IS</b> tracked by Litestack.
                 </Typography>
               </Stack>
             ) : (
@@ -106,7 +106,7 @@ const Popup = () => {
               >
                 <CancelIcon sx={{ color: 'white' }} />
                 <Typography>
-                  This website <b>IS NOT</b> tracked by Limpid.
+                  This website <b>IS NOT</b> tracked by Litestack.
                 </Typography>
               </Stack>
             )}
@@ -115,7 +115,7 @@ const Popup = () => {
           <Box>
             <Typography sx={{ my: 2 }}>
               Enable the Chrome synchronization with your organization's Google
-              account to activate Limpid.
+              account to activate Litestack.
             </Typography>
             <Button variant="contained" onClick={handleSignInButtonClick}>
               Sign in

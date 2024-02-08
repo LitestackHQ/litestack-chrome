@@ -1,10 +1,10 @@
 {
-  "name": "limpid-chrome",
+  "name": "litestack-chrome",
   "version": "1.0.1",
-  "description": "Official Chrome extension of Limpid",
+  "description": "Official Chrome extension of Litestack",
   "repository": {
     "type": "git",
-    "url": "https://github.com/valentin-fclt/limpid-chrome.git"
+    "url": "https://github.com/LitestackHQ/litestack-chrome.git"
   },
   "scripts": {
     "build": "node utils/build.js",
